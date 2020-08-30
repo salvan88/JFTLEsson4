@@ -1,0 +1,5 @@
+gerzen777gmail\com\service\DataBaseConnection.class
+gerzen777gmail\com\service\DataBaseFunctions.class
+gerzen777gmail\com\model\User.class
+gerzen777gmail\com\model\UserCollection.class
+gerzen777gmail\com\deserializer\CsvUserDeserializer.class
