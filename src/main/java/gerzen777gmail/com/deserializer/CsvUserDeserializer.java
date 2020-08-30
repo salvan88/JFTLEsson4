@@ -12,12 +12,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class CsvUserDeserializer {
-    public Collection<User> deserializer(String fileName) {
+    public Collection<User> deserializer(File file) {
         Collection<User> userCollection = new ArrayList<>();
         CsvMapper csvMapper = new CsvMapper();
-        CsvSchema csvSchema = CsvSchema.emptySchema().withHeader();
+        CsvSchema csvSchema = CsvSchema.emptySchema().withColumnSeparator(';').withHeader();
 
-        File in = new File(fileName);
+        File in = new File(file.getName());
 
         ObjectReader oReader = csvMapper.readerFor(User.class).with(csvSchema);
         try {
@@ -31,5 +31,4 @@ public class CsvUserDeserializer {
 
         return userCollection;
     }
-
 }
